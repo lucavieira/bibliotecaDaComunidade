@@ -41,6 +41,36 @@ header p {
   color: rgba(255, 255, 255, 0.83);
 }
 
+nav {
+  margin-top: 100px;
+  margin-bottom: 116px;
+}
+
+nav ul{
+  list-style: none;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+li {
+  padding: 20px;
+
+  color: white;
+  background-color: rgb(0, 39, 99);
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+nav ul a:hover li{
+  color: black;
+  background-color: rgb(66, 99, 148);
+}
+
 main {
   background: url(images/background-main.png) no-repeat;
   height: 570px;
