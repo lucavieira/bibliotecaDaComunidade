@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Rancho', cursive;
+}
+
+header {
+  background: url(images/background.png) no-repeat center;
+
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+header h1 {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 56px;
+  text-align: center;
+
+  width: 957px;
+}
+
+header p {
+  width: 263px;
+  height: 60px;
+
+  font-size: 28px;
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.83);
+}
+
+main {
+  background: url(images/background-main.png) no-repeat;
+  height: 570px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2{
+  font-size: 2.5rem;
+  margin-top: 90px;
+}
+
+input,
+select {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+#contato {
+  margin-right: 90px;
+}
+
+#livros {
+  width: 160px;
+  margin-left: 10px;
+}
+
+#data {
+  margin-right: 110px;
+}
+
+#campo_data {
+  margin-right: 10px;
+}
+
+#campoDataDevolucao {
+  width: 155px;
+}
+
+.btn {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#btn-cadastrar {
+  height: 35px;
+  width: 90px;
+
+  background-color: rgb(76, 42, 167);
+  color: white;
+
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+footer {
+  background-color: black;
+  height: 60px;
+
+  color: rgba(255, 255, 255, 0.60);
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+
+  color: rgb(0, 89, 255, 0.60);
+}
+
+footer a:hover {
+  color: rgb(0, 89, 255);
+}
