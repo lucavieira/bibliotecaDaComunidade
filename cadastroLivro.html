@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro de Livros</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Cadastro de Livros</h1>
-    <p>Doe, estantes e livros</p>
-  </header>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Livros</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Livros</h1>
+      <p>Doe, estantes e livros</p>
+    </header>
+    <main id="cadastroLivros">
+      <h2>Cadastro de Livros</h2>
+      <form action="">
+        <label for="titulo">Titulo:</label><br>
+        <input type="text" name="titulo" class="campo_dados" size="40"><br>
+        <label for="autor">Autor:</label><br>
+        <input type="text" name="autor" class="campo_dados" size="40"><br>
+        <label for="genero">Gênero:</label><br>
+        <div class="camposGenero">
+          <input type="checkbox" name="acao" id="acao"><label for="acao">Ação</label>
+          <input type="checkbox" name="suspense" id="suspense"><label for="suspense">Suspense</label>
+          <input type="checkbox" name="romance" id="romance"><label for="romance">Romance</label>
+          <input type="checkbox" name="ficcao" id="ficcao"><label for="ficcao">Ficção</label>
+          <input type="checkbox" name="terror" id="terror"><label for="terror">Terror</label>
+          <input type="checkbox" name="autoAjuda" id="autoAjuda"><label for="autoAjuda">Auto-Ajuda</label>
+          <input type="checkbox" name="fantasia" id="fantasia"><label for="fantasia">Fantasia</label>
+          <input type="checkbox" name="infantil" id="infantil"><label for="infantil">Infantil</label>
+          <input type="checkbox" name="contos" id="contos"><label for="contos">Contos</label>
+        </div>
+      </form>
+      <input type="button" value="Cadastrar" id="btn" />
+    </main>
+    <footer>
+      <p>
+        Desenvolvido por
+        <a href="https://www.linkedin.com/in/lucas-vieira-dev/" target="_blank"
+          >Lucas Vieira</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>

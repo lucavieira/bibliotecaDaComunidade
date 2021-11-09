@@ -46,7 +46,7 @@ nav {
   margin-bottom: 116px;
 }
 
-nav ul{
+nav ul {
   list-style: none;
 
   display: flex;
@@ -66,13 +66,12 @@ nav ul a {
   text-decoration: none;
 }
 
-nav ul a:hover li{
+nav ul a:hover li {
   color: black;
   background-color: rgb(66, 99, 148);
 }
 
 main {
-  background: url(images/background-main.png) no-repeat;
   height: 570px;
 
   display: flex;
@@ -80,7 +79,15 @@ main {
   align-items: center;
 }
 
-h2{
+#alugaLivros {
+  background: url(images/background-main.png) no-repeat;
+}
+
+#cadastroLivros {
+  background: url(images/background-cadastro.png) no-repeat;
+}
+
+h2 {
   font-size: 2.5rem;
   margin-top: 90px;
 }
@@ -115,12 +122,7 @@ label {
   width: 155px;
 }
 
-.btn {
-  margin-top: 10px;
-  text-align: center;
-}
-
-#btn-cadastrar {
+#btn {
   height: 35px;
   width: 90px;
 
@@ -133,11 +135,27 @@ label {
   cursor: pointer;
 }
 
+.camposGenero {
+  display: flex;
+  flex-flow: row wrap;
+
+  width: 320px;
+}
+
+.camposGenero input {
+  width: 25px;
+  height: 25px;
+}
+
+.camposGenero label {
+  margin-right: 15px;
+}
+
 footer {
   background-color: black;
   height: 60px;
 
-  color: rgba(255, 255, 255, 0.60);
+  color: rgba(255, 255, 255, 0.6);
 
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 20px;
@@ -150,7 +168,7 @@ footer {
 footer a {
   text-decoration: none;
 
-  color: rgb(0, 89, 255, 0.60);
+  color: rgb(0, 89, 255, 0.6);
 }
 
 footer a:hover {
