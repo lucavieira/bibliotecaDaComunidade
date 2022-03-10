@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background: url(images/background.png) no-repeat center;
+  background: url(../images/background.png) no-repeat center;
 
   height: 300px;
 
@@ -80,11 +80,11 @@ main {
 }
 
 #alugaLivros {
-  background: url(images/background-main.png) no-repeat;
+  background: url(../images/background-main.png) no-repeat;
 }
 
 #cadastroLivros {
-  background: url(images/background-cadastro.png) no-repeat;
+  background: url(../images/background-cadastro.png) no-repeat;
 }
 
 h2 {
