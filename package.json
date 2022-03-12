@@ -1,0 +1,25 @@
+{
+  "name": "bibliotecadacomunidade",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.17.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucavieira/bibliotecaDaComunidade.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucavieira/bibliotecaDaComunidade/issues"
+  },
+  "homepage": "https://github.com/lucavieira/bibliotecaDaComunidade#readme",
+  "description": ""
+}
