@@ -1,0 +1,24 @@
+.rent-books {
+    background: url(../images/background-main.png) no-repeat;
+}
+
+#contato {
+    margin-right: 90px;
+}
+
+#livros {
+    width: 160px;
+    margin-left: 10px;
+}
+
+#data {
+    margin-right: 110px;
+}
+
+#campo_data {
+    margin-right: 10px;
+}
+
+#campoDataDevolucao {
+    width: 155px;
+}

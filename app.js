@@ -27,7 +27,7 @@ const app = express()
 
     // ADD NEW BOOK
         app.get('/addbook', (req, res) => {
-            res.render('cadastroLivro')
+            res.render('register_book')
         })
 
     // ADD IN DATABASE
@@ -37,7 +37,7 @@ const app = express()
                 autor: req.body.autor,
                 genero: req.body.genero
             }).then(() => {
-                res.send('Sucesso')
+                res.redirect('/')
             }).catch(error => {
                 res.send('Error ' + error)
             })
@@ -50,7 +50,7 @@ const app = express()
     // RENT BOOK
         app.get('/rentbook', (req, res) => {
             Book.findAll().then(book => {
-                res.render('alugarLivro', {books: book})
+                res.render('rent_book', {books: book})
             }).catch(error => {
                 console.log('Error ' + error)
             })

@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Rancho", cursive;
+}
+
+header {
+    background: url(../images/background.png) no-repeat center;
+
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+header h1 {
+    font-family: "Rubik Mono One", sans-serif;
+    font-size: 56px;
+    text-align: center;
+
+    width: 957px;
+}
+
+header p {
+    width: 263px;
+    height: 60px;
+
+    font-size: 28px;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.83);
+}
+
+nav {
+    margin-top: 100px;
+    margin-bottom: 116px;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+li {
+    padding: 20px;
+
+    color: white;
+    background-color: rgb(0, 39, 99);
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+nav ul a:hover li {
+    color: black;
+    background-color: rgb(66, 99, 148);
+}
+
+main {
+    height: 570px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-top: 90px;
+}
+
+input,
+select {
+  margin-bottom: 20px;
+}
+
+.campo_dados {
+  width: 300px;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    height: 35px;
+    width: 90px;
+
+    background-color: rgb(76, 42, 167);
+    color: white;
+
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+footer {
+    background-color: black;
+    height: 60px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+
+    color: rgb(0, 89, 255, 0.6);
+}
+
+footer a:hover {
+    color: rgb(0, 89, 255);
+}
