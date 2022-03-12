@@ -1,27 +1,33 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const Book = require('./models/Books')
+const path = require('path')
 // const con = require('./models/connection_database')
+
+const consolidate = require('consolidate') // Config template HTML
 
 const app = express()
 
 // CONFIGS
+    // TEMPLATES HTML
+        app.engine('html', consolidate.swig)
+        app.set('views', path.join(__dirname, 'views'))
+        app.set('view engine', 'html');
 
     // BODY PARSER
         app.use(bodyParser.urlencoded({extended: false}))
         app.use(bodyParser.json())
         app.use(express.static(__dirname + '/public'))
 
-// ROUTES
-
+    // ROUTES
     // HOME
         app.get('/', (req, res) => {
-            res.sendFile(__dirname + '/views/home.html')
+            res.render('home')
         })
 
     // ADD NEW BOOK
         app.get('/addbook', (req, res) => {
-            res.sendFile(__dirname + '/views/cadastroLivro.html')
+            res.render('cadastroLivro')
         })
 
     // ADD IN DATABASE
@@ -43,7 +49,12 @@ const app = express()
 
     // RENT BOOK
         app.get('/rentbook', (req, res) => {
-            res.sendFile(__dirname + '/views/alugarLivro.html')
+            Book.findAll().then(book => {
+                res.render('alugarLivro', {books: book})
+            }).catch(error => {
+                console.log('Error ' + error)
+            })
+            //res.sendFile(__dirname + '/views/alugarLivro.html')
         })
 
 // Abrindo servidor na porta 5001

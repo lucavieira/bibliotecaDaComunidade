@@ -97,6 +97,11 @@ select {
   margin-bottom: 20px;
 }
 
+input.campo_dados,
+select.campo_dados {
+  width: 300px;
+}
+
 label {
   font-size: 1.5rem;
 }
@@ -122,7 +127,13 @@ label {
   width: 155px;
 }
 
-#btn {
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
   height: 35px;
   width: 90px;
 
@@ -133,22 +144,6 @@ label {
   border-radius: 6px;
 
   cursor: pointer;
-}
-
-.camposGenero {
-  display: flex;
-  flex-flow: row wrap;
-
-  width: 320px;
-}
-
-.camposGenero input {
-  width: 25px;
-  height: 25px;
-}
-
-.camposGenero label {
-  margin-right: 15px;
 }
 
 footer {

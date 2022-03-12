@@ -16,11 +16,11 @@
       <h2>Cadastro de Livros</h2>
       <form action="/newbook" method="post">
         <label for="titulo">Titulo:</label><br>
-        <input type="text" name="titulo" class="campo_dados" size="40"><br>
+        <input type="text" name="titulo" class="campo_dados"><br>
         <label for="autor">Autor:</label><br>
-        <input type="text" name="autor" class="campo_dados" size="40"><br>
+        <input type="text" name="autor" class="campo_dados"><br>
         <label for="genero">Gênero:</label><br>
-        <select name="genero" id="genero">
+        <select name="genero" id="genero" class="campo_dados">
           <option value="acao">Ação</option>
           <option value="suspense">Suspense</option>
           <option value="romance">Romance</option>
@@ -30,7 +30,12 @@
           <option value="infantil">Infantil</option>
           <option value="contos">Contos</option>
         </select><br>
-        <button type="submit" id="btn">Cadastrar</button>
+        <div class="btns">
+          <button type="submit" class="btn">Cadastrar</button>
+          <a href="/">
+            <button type="button" class="btn">Voltar</button>
+          </a>
+        </div>
       </form>
     </main>
     <footer>

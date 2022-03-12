@@ -37,22 +37,28 @@
           name="contato"
           placeholder="(DDD) 99999-9999"
           size="15"
-          class="campo_dados"
         />
         <select name="livro" id="livros" class="campo_dados">
-          <option value="aa">aaa</option></select
-        ><br />
+          {% for book in books %}
+            <option value="">{{book.titulo}}</option>
+          {% endfor %}
+        </select><br />
         <label for="data" id="data">Data:</label>
         <label for="data_devolucao">Data da Devolução:</label><br />
-        <input type="date" name="data" class="campo_dados" id="campo_data" />
+        <input type="date" name="data" id="campo_data" />
         <input
           type="date"
           name="data"
           class="campo_dados"
           id="campoDataDevolucao"
         /><br />
+        <div class="btns">
+          <button type="submit" class="btn">Alugar</button>
+          <a href="/">
+            <button type="button" class="btn">Voltar</button>
+          </a>
+        </div>
       </form>
-      <input type="button" value="Alugar" id="btn" />
     </main>
     <footer>
       <p>
