@@ -1,38 +1,50 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const Book = require('./models/Books')
+// const con = require('./models/connection_database')
 
 const app = express()
 
-// connection.query("INSERT INTO livros (titulo, autor, genero) VALUES ('Harry Potter e a Pedra Filosofal', 'JK. Rowling', 'Fantasia')")
+// CONFIGS
 
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
-app.use(express.static(__dirname + '/public'))
+    // BODY PARSER
+        app.use(bodyParser.urlencoded({extended: false}))
+        app.use(bodyParser.json())
+        app.use(express.static(__dirname + '/public'))
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/home.html')
-})
+// ROUTES
 
-app.get('/addbook', (req, res) => {
-    res.sendFile(__dirname + '/views/cadastroLivro.html')
-})
+    // HOME
+        app.get('/', (req, res) => {
+            res.sendFile(__dirname + '/views/home.html')
+        })
 
-app.post('/newbook', (req, res) => {
-    Book.create({
-        titulo: req.body.titulo,
-        autor: req.body.autor,
-        genero: req.body.genero
-    }).then(() => {
-        res.send('Sucesso')
-    }).catch(error => {
-        res.send('Error ' + error)
-    })
-})
+    // ADD NEW BOOK
+        app.get('/addbook', (req, res) => {
+            res.sendFile(__dirname + '/views/cadastroLivro.html')
+        })
 
-app.get('/alugarbook', (req, res) => {
-    res.sendFile(__dirname + '/views/alugarLivro.html')
-})
+    // ADD IN DATABASE
+        app.post('/newbook', (req, res) => {
+            Book.create({
+                titulo: req.body.titulo,
+                autor: req.body.autor,
+                genero: req.body.genero
+            }).then(() => {
+                res.send('Sucesso')
+            }).catch(error => {
+                res.send('Error ' + error)
+            })
+        })
+
+        // app.post('/newbook', (req, res) => {
+        //     con.connection.query(`INSERT INTO teste (titulo, autor, genero) VALUES ('${req.body.titulo}', '${req.body.autor}', '${req.body.genero}')`)
+        // })
+
+    // RENT BOOK
+        app.get('/rentbook', (req, res) => {
+            res.sendFile(__dirname + '/views/alugarLivro.html')
+        })
 
 // Abrindo servidor na porta 5001
 app.listen(5001, () => {
