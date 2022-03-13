@@ -8,12 +8,14 @@
 
 body {
     font-family: "Rancho", cursive;
+    height: 100vh;
 }
 
 header {
     background: url(../images/background.png) no-repeat center;
+    background-size: cover;
 
-    height: 300px;
+    height: 40vh;
 
     display: flex;
     flex-direction: column;
@@ -27,14 +29,9 @@ header h1 {
     font-family: "Rubik Mono One", sans-serif;
     font-size: 56px;
     text-align: center;
-
-    width: 957px;
 }
 
 header p {
-    width: 263px;
-    height: 60px;
-
     font-size: 28px;
     text-align: center;
 
@@ -42,8 +39,11 @@ header p {
 }
 
 nav {
-    margin-top: 100px;
-    margin-bottom: 116px;
+    height: 60vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul {
@@ -72,7 +72,9 @@ nav ul a:hover li {
 }
 
 main {
-    height: 570px;
+    max-width: 1300px;
+    width: 90%;
+    margin: auto;
 
     display: flex;
     flex-direction: column;
@@ -142,7 +144,6 @@ label {
 
 footer {
     background-color: black;
-    height: 60px;
 
     color: rgba(255, 255, 255, 0.6);
 
@@ -152,6 +153,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    padding: 15px;
 }
 
 footer a {
@@ -162,4 +165,11 @@ footer a {
 
 footer a:hover {
     color: rgb(0, 89, 255);
+}
+
+
+@media (max-width: 415px) {
+    header h1 {
+        font-size: 36px;
+    }
 }

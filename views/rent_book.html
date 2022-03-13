@@ -38,14 +38,9 @@
           class="campo_dados"
           size="40"
         /><br />
-        <label for="contato" id="contato">Contato:</label>
+        <label for="contato" id="contato">Contato:</label><br />
+        <input type="tel" name="contato" class="campo_dados" placeholder="(DDD) 99999-9999" size="15"/><br />
         <label for="livro">Livro:</label><br />
-        <input
-          type="tel"
-          name="contato"
-          placeholder="(DDD) 99999-9999"
-          size="15"
-        />
         <select name="livro" id="livros" class="campo_dados">
           {% for book in books %}
             {% if book.rent == "Não alugado" %}
@@ -53,15 +48,10 @@
             {% endif %}
           {% endfor %}
         </select><br />
-        <label for="rent_date" id="data">Data:</label>
+        <label for="rent_date" id="data">Data:</label><br />
+        <input type="date" name="rent_date" id="campo_data" class="campo_dados" /><br />
         <label for="return_date">Data da Devolução:</label><br />
-        <input type="date" name="rent_date" id="campo_data" />
-        <input
-          type="date"
-          name="return_date"
-          class="campo_dados"
-          id="campoDataDevolucao"
-        /><br />
+        <input type="date" name="return_date" class="campo_dados" id="campoDataDevolucao"/><br />
         <div class="btns">
           <button type="submit" class="btn">Alugar</button>
           <a href="/">

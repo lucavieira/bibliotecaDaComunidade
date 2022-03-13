@@ -1,3 +1,6 @@
 .register-books {
-  background: url(../images/background-cadastro.png) no-repeat;
+  background: url(../images/background-cadastro.png) no-repeat center;
+  background-size: cover;
+
+  padding-bottom: 130px;
 }
