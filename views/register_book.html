@@ -14,6 +14,17 @@
       <p>Doe, estantes e livros</p>
     </header>
     <main class="register-books">
+      {% if success_msg %}
+        <div>
+          <p>{{success_msg}}</p>
+        </div>
+      {% endif %}
+
+      {% if error_msg %}
+        <div>
+          <p>{{error_msg}}</p>
+        </div>
+      {% endif %}
       <h2>Cadastro de Livros</h2>
       <form action="/newbook" method="post">
         <label for="titulo">Titulo:</label><br>
