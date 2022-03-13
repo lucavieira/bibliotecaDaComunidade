@@ -116,6 +116,30 @@ label {
     cursor: pointer;
 }
 
+
+.result-msg {
+    width: 200px;
+    height: 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.success-msg {
+    background-color: #167716;
+}
+
+.error-msg {
+    background-color: #7a1313;
+}
+
 footer {
     background-color: black;
     height: 60px;

@@ -13,16 +13,12 @@
       <h1>Alugue seu livro</h1>
     </header>
     <main class="rent-books">
-      {% if success_msg %}
-        <div>
-          <p>{{success_msg}}</p>
-        </div>
+      {% if success_msg != '' %}
+        <div class="result-msg success-msg">{{success_msg}}</div>
       {% endif %}
 
-      {% if error_msg %}
-        <div>
-          <p>{{error_msg}}</p>
-        </div>
+      {% if error_msg != '' %}
+        <div class="result-msg error-msg">{{error_msg}}</div>
       {% endif %}
       <h2>Alugar</h2>
       <form action="/rent" method="post">
