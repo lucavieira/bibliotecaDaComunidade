@@ -14,7 +14,7 @@
     </header>
     <main class="rent-books">
       <h2>Alugar</h2>
-      <form action="" method="get">
+      <form action="/rent" method="post">
         <label for="nome">Nome:</label><br />
         <input
           type="text"
@@ -41,15 +41,17 @@
         />
         <select name="livro" id="livros" class="campo_dados">
           {% for book in books %}
-            <option value="">{{book.titulo}}</option>
+            {% if book.rent == "Não alugado" %}
+              <option value="{{book.id}}">{{book.titulo}}</option>
+            {% endif %}
           {% endfor %}
         </select><br />
-        <label for="data" id="data">Data:</label>
-        <label for="data_devolucao">Data da Devolução:</label><br />
-        <input type="date" name="data" id="campo_data" />
+        <label for="rent_date" id="data">Data:</label>
+        <label for="return_date">Data da Devolução:</label><br />
+        <input type="date" name="rent_date" id="campo_data" />
         <input
           type="date"
-          name="data"
+          name="return_date"
           class="campo_dados"
           id="campoDataDevolucao"
         /><br />

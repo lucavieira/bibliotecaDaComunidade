@@ -14,6 +14,11 @@ const Book = database.connection.define('livros', {
     genero: {
         type: database.Sequelize.STRING,
         allowNull: false
+    },
+
+    rent: {
+        type: database.Sequelize.STRING,
+        defaultValue: 'Não alugado'
     }
 })
 
